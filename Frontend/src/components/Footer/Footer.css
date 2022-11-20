@@ -1,0 +1,18 @@
+  .wrapper {
+    padding: 30%;
+  }
+  
+  .footer-nav a {
+    color: #c74f78;
+    text-decoration: none;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+  
+  .footer-nav a:hover {
+    color: #f26896;
+    transition: color .15s ease-in-out;
+  }
+  
+  
+  
