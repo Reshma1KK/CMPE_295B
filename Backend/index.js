@@ -83,6 +83,12 @@ app.use((req,res,next) => {
 const getRestaurants = require("./routes/getRestaurants")
 app.use("/getRestaurants",getRestaurants);
 
+const restaurant = require("./routes/restaurant")
+app.use("/restaurant",restaurant);
+
+const reserveTable = require("./routes/reserveTable")
+app.use("/reserveTable",reserveTable);
+
 app.listen(3001,()=>{
     console.log(`Server running on port 3001`)
 });

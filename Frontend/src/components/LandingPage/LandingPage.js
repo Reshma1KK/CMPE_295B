@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Modal,Box,Button} from '@mui/material';
-import SearchBar from '../SearchBar/SearchBar.js'
+import SearchBar from '../CustomComponents/SearchBar.js'
 
 const style = {
   position: 'absolute',
@@ -45,9 +45,9 @@ function LandingPage() {
         <button className='button'>
           Vacation Rentals <FontAwesomeIcon icon={faHouse} />
         </button>
-        <button className='button'>
+        {/* <button className='button'>
           Things to Do <FontAwesomeIcon icon={faCheck} />
-        </button>
+        </button> */}
         <button className="button" onClick={handleOpen}>
           Restaurants
           <FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon>
@@ -70,7 +70,7 @@ function LandingPage() {
         <button className='button'>More ...</button>
       </div>
       <div>
-      <img src={process.env.PUBLIC_URL + '/images/landing.jpeg'} alt="Landing-Img" className="landing-img searchBar"/>
+      <img src={process.env.PUBLIC_URL + '/images/landing.jpeg'} alt="Landing-Img" className="landing-img searchBar" style={{padding:"80px", backgroundColor:"white",height:"550px"}}/>
       </div>
     </>
   )

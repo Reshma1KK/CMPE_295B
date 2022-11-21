@@ -1,18 +1,14 @@
-  .wrapper {
-    padding: 30%;
-  }
-  
-  .footer-nav a {
-    color: #c74f78;
-    text-decoration: none;
-    margin: 0 .5rem;
-    display: inline-block;
-  }
-  
-  .footer-nav a:hover {
-    color: #f26896;
-    transition: color .15s ease-in-out;
-  }
-  
-  
-  
+#bookRental-footer{
+  position: fixed;
+ bottom: 0;
+ width: 100%;
+ background-color: antiquewhite;
+ height: 100px;   /* Height of the footer */
+ margin-top: auto 0;
+}
+
+#bookRental-footer-body{
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}

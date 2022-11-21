@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import LandingPage from "./components/LandingPage/LandingPage.js"
 import Restaurants from "./components/Restaurants/Restaurants.js"
 import ReserveTable from "./components/Restaurants/ReserveTable.js"
-import SearchBar from "./components/SearchBar/SearchBar.js"
+import SearchBar from "./components/CustomComponents/SearchBar.js"
 
 function App() {
   console.log("Hello")

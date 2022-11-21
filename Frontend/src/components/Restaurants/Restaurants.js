@@ -11,20 +11,26 @@ const Restaurants = () => {
     const [restaurants,setRestaurants] = useState([]);
 
     useEffect(() => {
-        getAllCustomerData();
+        getRestaurants();
     },[]);
 
-    const getAllCustomerData = () =>{
-    axios.get("http://localhost:3001/getRestaurants",{
-    })
-    .then((response) => {
-            console.log(response.data)
-            const request = response.data;
-            setRestaurants(request);
-        }).catch(error =>
-        console.error("error:", error)
-    )
-    }
+    const getRestaurants = () =>{
+        axios.get("http://localhost:3001/getRestaurants",{
+        })
+        .then((response) => {
+                console.log(response.data)
+                const request = response.data;
+                setRestaurants(request);
+            }).catch(error =>
+            console.error("error:", error)
+    )}
+
+    function reserveTable(id,name){
+        localStorage.setItem("RestaurantName",name)
+        localStorage.setItem("RestaurantId",id);
+        window.open("/ReserveTable","_self");
+  
+    };
 
     return (
         <div>
@@ -49,7 +55,7 @@ const Restaurants = () => {
                         </div>
                         <div class = "__detail">
                             <Link to="/ReserveTable">
-                                <Button variant="contained" color="success" size="small" style={{border:"1px solid"}}>
+                                <Button variant="contained" color="success" size="small" style={{border:"1px solid"}} onClick={()=>{reserveTable(restaurant._id,restaurant.restaurantName)}}>
                                     Find a table
                                 </Button>
                             </Link>

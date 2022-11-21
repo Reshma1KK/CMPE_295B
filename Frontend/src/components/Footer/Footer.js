@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './footer.css'
 
-export default function Footer(){
+const Footer = ()=>{
     return(
-        <div className="wrapper">
-            <small>&copy;2022 <strong>TravelBuddy Company</strong>, All Rights Reserved</small>
-            <nav className="footer-nav">
-            <a href="#">Back to Top</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy</a>
-            </nav>
+        <div id = "bookRental-footer">
+        <div id = "bookRental-footer-body">
+            <p>© 2022 TravelBuddy LLC All rights reserved.</p>
+            <p style={{fontSize:"10px"}}>TravelBuddy LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their 
+                site for a full disclosure of all applicable fees.</p>
         </div>
+    </div> 
     )
-} 
+}
+
+export default Footer;

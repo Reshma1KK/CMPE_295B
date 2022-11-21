@@ -1,7 +1,26 @@
 import React from "react";
 import './NavBar.css'
+import PersonIcon from '@mui/icons-material/Person';
+import {Button,Dialog,Box,DialogContent,DialogActions, Typography} from "@mui/material"
 
 function NavBar(){
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleClose = (event: React.SyntheticEvent<unknown>, reason?: string) => {
+        if (reason !== 'backdropClick') {
+          setOpen(false);
+        }
+      };
+
+    const handleChange = () =>{
+        localStorage.clear();
+        setOpen(false);
+    }
     return(
         <div className="navbar-home">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -11,18 +30,28 @@ function NavBar(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Book your Tickets</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Offers</a>
-                    </li>
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Bookings</a>
+                        </li>
                     </ul>
-                    <span>
-                        <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo" className="navbar-logo"/>
+                    <span style={{width: "100px", height:"auto"}}>
+                    <div>
+                        <Button onClick={handleClickOpen}><PersonIcon/></Button>
+                        <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
+                            <DialogContent>
+                            <Box component="form" sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                                <Typography>Do you want to logout</Typography>
+                            </Box>
+                            </DialogContent>
+                            <DialogActions>
+                            <Button onClick={handleClose}>Cancel</Button>
+                            <Button onClick={handleChange}>Ok</Button>
+                            </DialogActions>
+                        </Dialog>
+                    </div>
                     </span>
                 </div>
             </nav>

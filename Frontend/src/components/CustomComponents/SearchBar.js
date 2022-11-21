@@ -1,11 +1,10 @@
-import React,{useState,Fragment} from "react";
+import React,{useState} from "react";
 import "./SearchBar.css";
+import {Link} from "react-router-dom"
 
 function SearchBar() {
 
     const[searchTerm,setSearchTerm]=useState("");
-
-    console.log(searchTerm);
 
   return(
     <div className="container-fluid" style={{marginTop:"0px"}}>
@@ -30,9 +29,11 @@ function SearchBar() {
                         }
                         />
                             <div className="input-group-append">
-                                <button className="btn btn-outline-success btn-lg" type="button">
-                                <i className="fa fa-search"></i>
-                                </button>
+                                <Link to="/Restaurants">
+                                    <button className="btn btn-outline-success btn-lg" type="button" onClick={localStorage.setItem("location",searchTerm)}>
+                                    <i className="fa fa-search"></i>
+                                    </button>
+                                </Link>
                             </div>
                     </div>
                 </div>
