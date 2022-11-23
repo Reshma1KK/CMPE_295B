@@ -11,10 +11,12 @@ import Footer from '../Footer/Footer'
 import ReviewsCard from '../CustomComponents/ReviewsCard'
 import RestaurantCardDetails from '../CustomComponents/RestaurantDetailsCard'
 import Location from '../CustomComponents/Location'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function ReserveTable(){
 
   const[restaurant,setRestaurant]=useState([]);
+  const[isLoading,setIsLoading] = useState(false)
 
     useEffect(() => {
       bookTable();
@@ -23,6 +25,7 @@ function ReserveTable(){
   
 
     const bookTable = () =>{
+        setIsLoading(true)
         const name = localStorage.getItem("RestaurantName");
         console.log(name) 
         console.log(typeof(name))
@@ -31,6 +34,7 @@ function ReserveTable(){
         console.log(response.data[0])
         const request = response.data[0];
         setRestaurant(request);
+        setIsLoading(false)
     }).catch(error =>
     console.error("error:", error))
     }
@@ -39,6 +43,7 @@ function ReserveTable(){
     return (
         <>
             <NavBar/>
+            <div style={{ padding:"50px"}}>{isLoading ? <CircularProgress /> : null}</div>
             <Grid container spacing={2} className="display-page" style={{padding:"20px"}}>
                 <Grid item xs={6} md={12}>
                         <h3>{restaurant.restaurantName}</h3>

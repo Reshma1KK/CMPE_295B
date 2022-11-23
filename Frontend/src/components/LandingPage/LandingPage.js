@@ -45,9 +45,21 @@ function LandingPage() {
         <button className='button'>
           Vacation Rentals <FontAwesomeIcon icon={faHouse} />
         </button>
-        {/* <button className='button'>
+        <button className='button'>
           Things to Do <FontAwesomeIcon icon={faCheck} />
-        </button> */}
+        </button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          transparent={true}
+        >
+          <Box sx={style}>
+            <SearchBar/>
+            <Button onClick={handleClose}></Button>
+          </Box>
+       </Modal>
         <button className="button" onClick={handleOpen}>
           Restaurants
           <FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon>
@@ -70,7 +82,7 @@ function LandingPage() {
         <button className='button'>More ...</button>
       </div>
       <div>
-      <img src={process.env.PUBLIC_URL + '/images/landing.jpeg'} alt="Landing-Img" className="landing-img searchBar" style={{padding:"80px", backgroundColor:"white",height:"550px"}}/>
+        <img src={process.env.PUBLIC_URL + '/images/landing.jpeg'} alt="Landing-Img" className="landing-img searchBar" style={{padding:"80px", backgroundColor:"white",height:"550px"}}/>
       </div>
     </>
   )
