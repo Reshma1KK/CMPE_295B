@@ -1,0 +1,40 @@
+#viewHotel{
+  margin-bottom: 150px;
+}
+  
+  #hotelItems{
+    border: 3px solid rgb(234, 229, 229);
+    box-shadow: 5px 10px 8px #888888;
+    /* padding: 20px; */
+    height: 300px;
+    width: 80%;
+    /* padding: 0px 40px 40px 40px; */
+    margin: 0% 5% 5% 10%;
+  } 
+
+
+  #imageHotel{
+    width: 100%;
+    height: 100%;
+  }
+
+  #bookHotel{
+    background-color: black;
+    color: #fff;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  #float-child{
+    width: 70%;
+    height: 80%;
+    float: left;
+} 
+
+#float-child-1{
+    width: 30%;
+    height: 90%;
+    float: left;
+}

@@ -7,11 +7,11 @@ import NavBar from "../NavBar/NavBar"
 import "./ReserveTable.css"
 import Carousel from "../CustomComponents/Carousel"
 import Reservation from "../Reservations/Reservation"
-import Footer from '../Footer/Footer'
-import ReviewsCard from '../CustomComponents/ReviewsCard'
+import Footer from '../User/Footer/footer'
 import RestaurantCardDetails from '../CustomComponents/RestaurantDetailsCard'
 import Location from '../CustomComponents/Location'
 import CircularProgress from '@mui/material/CircularProgress';
+import ReviewsCard from '../CustomComponents/ReviewsCard';
 
 function ReserveTable(){
 

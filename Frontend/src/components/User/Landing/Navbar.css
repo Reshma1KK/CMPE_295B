@@ -1,0 +1,35 @@
+#nav-bar{
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  
+  #nav-title{
+    font-size: xx-large;
+    font-family: cursive;
+    float: left;
+    text-decoration: none;
+    color: black;
+  }
+
+  #sign-in{
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;    
+    font-weight: bold;
+    float: right;
+    text-decoration: none;
+    font-size: medium;
+  }
+
+  #nav-buttons{
+    width: 110px;
+    background-color: black;
+    border-radius: 30px;
+    float: right;
+    height: 50px;
+    margin-right: 20px;
+    text-align: center;
+  }

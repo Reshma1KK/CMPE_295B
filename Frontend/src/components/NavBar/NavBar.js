@@ -2,10 +2,12 @@ import React from "react";
 import './NavBar.css'
 import PersonIcon from '@mui/icons-material/Person';
 import {Button,Dialog,Box,DialogContent,DialogActions, Typography} from "@mui/material"
+import { useNavigate } from 'react-router-dom';
 
 function NavBar(){
 
     const [open, setOpen] = React.useState(false);
+    const navigate = useNavigate();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -20,6 +22,8 @@ function NavBar(){
     const handleChange = () =>{
         localStorage.clear();
         setOpen(false);
+        navigate('/signIn')
+
     }
     return(
         <div className="navbar-home">

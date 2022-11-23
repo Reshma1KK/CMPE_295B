@@ -89,6 +89,21 @@ app.use("/restaurant",restaurant);
 const reserveTable = require("./routes/reserveTable")
 app.use("/reserveTable",reserveTable);
 
+const userSignup=require("./Routes/SignUp");
+app.use('/signup', userSignup);
+const userSignin=require("./Routes/SignIn");
+app.use('/signin', userSignin);
+const viewHotel=require("./Routes/viewHotels");
+app.use('/viewHotels', viewHotel);
+const viewVactionRentals=require("./Routes/viewVacationRentals");
+app.use('/viewRentals', viewVactionRentals);
+const viewFlights = require('./Routes/viewFlights')
+app.use('/viewflights', viewFlights)
+const bookFlight = require('./Routes/flightBooking')
+app.use('/bookFlight', bookFlight)
+const bookings = require('./Routes/bookings')
+app.use('/hotelBooking', bookings)
+
 app.listen(3001,()=>{
     console.log(`Server running on port 3001`)
 });

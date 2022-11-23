@@ -11,6 +11,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Modal,Box,Button} from '@mui/material';
 import SearchBar from '../CustomComponents/SearchBar.js'
+import Model from "../User/Model/Model";
+import VacationRentalModel from "../User/Model/VacationRentalModel";
+import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -24,7 +27,12 @@ const style = {
   p: 4,
 };
 
+
 function LandingPage() {
+  const navigate = useNavigate();
+  
+  const[isOpen, setIsOpen] = useState(false);
+  const[isRentalOpen, SetIsRentalsOpen] = useState(false);
 
   const [open,setOpen]=useState(false);
 
@@ -38,13 +46,18 @@ function LandingPage() {
   return (
     <>
       <NavBar/>
+
+      
+
       <div className='buttonGroup'>
-        <button className='button'>
+        <button className='button' onClick={()=> {setIsOpen(true); localStorage.setItem('curr', 'H')}} >
           Hotels <FontAwesomeIcon icon={faBed} />
         </button>
-        <button className='button'>
+        <Model open = {isOpen} onClose={()=> setIsOpen(false)}/>
+        <button className='button' onClick={()=> {SetIsRentalsOpen(true);localStorage.setItem('curr', 'VC') }}>
           Vacation Rentals <FontAwesomeIcon icon={faHouse} />
         </button>
+        <VacationRentalModel open = {isRentalOpen} onClose={()=> SetIsRentalsOpen(false)}/>
         <button className='button'>
           Things to Do <FontAwesomeIcon icon={faCheck} />
         </button>
@@ -76,8 +89,8 @@ function LandingPage() {
             <Button onClick={handleClose}></Button>
           </Box>
        </Modal>
-        <button className='button'>
-          Travel Stories <FontAwesomeIcon icon={faGlobe} />
+        <button className='button' onClick={()=>{navigate('/flights') }}>
+          Flights <FontAwesomeIcon icon={faGlobe} />
         </button>
         <button className='button'>More ...</button>
       </div>

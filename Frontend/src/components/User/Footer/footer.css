@@ -1,0 +1,14 @@
+#bookRental-footer{
+    position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: antiquewhite;
+   height: 100px;   /* Height of the footer */
+   margin-top: auto 0;
+}
+
+#bookRental-footer-body{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}

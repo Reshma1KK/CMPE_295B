@@ -1,0 +1,10 @@
+#container{
+height: 100vh;
+}
+
+#trip-image{
+    
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 80px;
+}
