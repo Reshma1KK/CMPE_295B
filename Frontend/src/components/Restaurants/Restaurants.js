@@ -9,6 +9,7 @@ import {Link} from 'react-router-dom';
 const Restaurants = () => {
 
     const [restaurants,setRestaurants] = useState([]);
+    const storedLocation = localStorage.getItem("location").toLowerCase();
 
     useEffect(() => {
         getRestaurants();
@@ -18,7 +19,6 @@ const Restaurants = () => {
         axios.get("http://localhost:3001/getRestaurants",{
         })
         .then((response) => {
-                console.log(response.data)
                 const request = response.data;
                 setRestaurants(request);
             }).catch(error =>
@@ -37,7 +37,13 @@ const Restaurants = () => {
             <NavBar/>
             <h3 className="restaurant-header">Reserve a Table Online</h3>
             <div className="body-restaurant">
-            {restaurants.map((restaurant) => (
+            {restaurants.filter(function (restaurant) {
+                if(restaurant.location.toLowerCase().includes(storedLocation)){
+                    console.log("cond1",restaurant.location.toLowerCase().includes(storedLocation))
+                    console.log("cond2",restaurant.location.toLowerCase() === (storedLocation))
+                    return true;
+            }}).map(function (restaurant) {
+                return(
                 <div class = "__area text-center" style={{display:"inline-block"}}>
                 <a href = "#" class = "__card">
                 <button class = "__favorit"><i class = "la la-heart-o"></i></button>
@@ -63,7 +69,8 @@ const Restaurants = () => {
                     </div>
                 </a>
                 </div>
-                ))}
+                )
+            })}
             </div>
         </div>
     )

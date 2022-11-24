@@ -9,10 +9,9 @@ import {
   faUtensils,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {Modal,Box,Button} from '@mui/material';
-import SearchBar from '../CustomComponents/SearchBar.js'
 import Model from "../User/Model/Model";
 import VacationRentalModel from "../User/Model/VacationRentalModel";
+import RestaurantModel from "../User/Model/RestaurantModel"
 import { useNavigate } from 'react-router-dom';
 
 const style = {
@@ -33,15 +32,7 @@ function LandingPage() {
   
   const[isOpen, setIsOpen] = useState(false);
   const[isRentalOpen, SetIsRentalsOpen] = useState(false);
-
   const [open,setOpen]=useState(false);
-
-  const handleOpen = () => { 
-      setOpen(true);
-  }
-  const handleClose = () =>{
-      setOpen(false);
-  }
 
   return (
     <>
@@ -61,34 +52,10 @@ function LandingPage() {
         <button className='button'>
           Things to Do <FontAwesomeIcon icon={faCheck} />
         </button>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-          transparent={true}
-        >
-          <Box sx={style}>
-            <SearchBar/>
-            <Button onClick={handleClose}></Button>
-          </Box>
-       </Modal>
-        <button className="button" onClick={handleOpen}>
-          Restaurants
-          <FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon>
+        <button className="button" onClick={()=> {setOpen(true)}}>
+          Restaurants <FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon>
         </button>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-          transparent={true}
-        >
-          <Box sx={style}>
-            <SearchBar/>
-            <Button onClick={handleClose}></Button>
-          </Box>
-       </Modal>
+        <RestaurantModel open = {open} onClose={()=> setOpen(false)}/>
         <button className='button' onClick={()=>{navigate('/flights') }}>
           Flights <FontAwesomeIcon icon={faGlobe} />
         </button>
