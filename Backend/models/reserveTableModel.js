@@ -6,6 +6,9 @@ const reserveTableSchema = new Schema({
     type:String,
     required: true,
   },
+  userId:{
+    type:String,
+  },
   date:{
     type:String
   },

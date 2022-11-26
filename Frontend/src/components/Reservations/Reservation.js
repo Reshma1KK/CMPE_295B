@@ -19,6 +19,7 @@ const Reservation = () => {
             guests:guests,
             date:startDate,
             time:value,
+            id: localStorage.getItem("id"),
             restaurantName:localStorage.getItem("RestaurantName")
         })
         .then((response) => {

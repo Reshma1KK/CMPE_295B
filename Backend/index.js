@@ -95,28 +95,25 @@ app.use("/getThingsToDo",getThingsToDo);
 const reserveActivity = require("./routes/reserveActivity")
 app.use("/reserveActivity",reserveActivity);
 
-const userSignup=require("./Routes/SignUp");
+const userSignup=require("./routes/SignUp");
 app.use('/signup', userSignup);
 
-const userSignin=require("./Routes/SignIn");
+const userSignin=require("./routes/SignIn");
 app.use('/signin', userSignin);
 
-const viewHotel=require("./Routes/viewHotels");
+const viewHotel=require("./routes/viewHotels");
 app.use('/viewHotels', viewHotel);
 
-const viewVactionRentals=require("./Routes/viewVacationRentals");
+const viewVactionRentals=require("./routes/viewVacationRentals");
 app.use('/viewRentals', viewVactionRentals);
 
-const viewFlights = require('./Routes/viewFlights')
+const viewFlights = require('./routes/viewFlights')
 app.use('/viewflights', viewFlights)
 
-const bookFlight = require('./Routes/flightBooking')
+const bookFlight = require('./routes/flightBooking')
 app.use('/bookFlight', bookFlight)
 
-const bookings = require('./Routes/bookings')
-app.use('/hotelBooking', bookings)
-
-const bookings = require('./Routes/bookings')
+const bookings = require('./routes/bookings')
 app.use('/bookNow', bookings)
 
 app.listen(3001,()=>{
