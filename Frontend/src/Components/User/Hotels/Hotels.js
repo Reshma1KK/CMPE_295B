@@ -4,12 +4,14 @@ import './hotels.css'
 import Hotel_1 from '../../Images/Hotel_1.jpg';
 import CalenderModel from './CalenderModel.js';
 import Footer from '../Footer/footer';
+import Navbar from '../../NavBar/NavBar' 
 
 const Hotels = ()=>{
     const Hotels = JSON.parse(localStorage.getItem('hotels'))
     const[isOpen, setIsOpen] = useState(false);
     return(
-        <><div id="viewHotel">
+        <><Navbar/>
+        <div id="viewHotel">
                         {Hotels.map(function (d, idx) {
 
                             return (

@@ -9,7 +9,7 @@ const ModelStyle = {
     top: '50%',
     left: '50%',
     width: '60%',
-    height: '60%',
+    height: '80%',
     borderRadius: '20px',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#FFF',

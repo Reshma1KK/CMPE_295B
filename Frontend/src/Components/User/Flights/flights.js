@@ -4,6 +4,7 @@ import RoundTripCal from "./RoundTripCal";
 import OneWayCal from "./OneWayCal";
 import {BiMinusCircle, BiPlusCircle} from 'react-icons/bi'
 import Footer from "../Footer/footer";
+import Navbar from '../../NavBar/NavBar' 
 
 const FiXCircle_Style = {
     backgroundColor: 'white',
@@ -78,7 +79,7 @@ const Flights = ()=>{
     }
 
     return(
-        <><div id="flights-home">
+        <><Navbar/><div id="flights-home">
             <div id="flights-title"></div>
 
             <div id="flights-float">

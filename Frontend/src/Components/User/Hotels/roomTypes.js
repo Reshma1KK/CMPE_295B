@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import RoomDetailsModel from '../RoomDetails/RoomDetailsModel'
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/footer';
+import Navbar from '../../NavBar/NavBar' 
 
 const RoomTypes = ()=>{
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ const RoomTypes = ()=>{
     let rate = JSON.stringify(localStorage.getItem('rate'))
     rate = parseInt(rate.slice(1,4))
     return(
-        <><div id="viewHotel">
+        <><Navbar/><div id="viewHotel">
             <h1>Select your Room</h1>
             <><div id="hotelItems">
                 <div id="float-child-1">

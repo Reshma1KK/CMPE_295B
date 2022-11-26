@@ -3,6 +3,7 @@ import Footer from '../Footer/footer';
 import './bookFlight.css';
 import ConfirmModel from '../BookHotel/ConfirmModel';
 import Axios from 'axios';
+import Navbar from '../../NavBar/NavBar' 
 
 const BookFlight = ()=>{
     const [firstName,setFirstName] = useState("");
@@ -30,7 +31,7 @@ const BookFlight = ()=>{
 
     if (localStorage.getItem('type') == 'round'){
         return(
-            <><div id="bookFlights-home">
+            <><Navbar/><div id="bookFlights-home">
                 <div id="bookFlights-home-part1">
                     <h2>Traveller Details</h2>
                     <input type="text" placeholder='First name'id = "userdetails-el" required onChange={(e)=>{
@@ -68,7 +69,7 @@ const BookFlight = ()=>{
     }
     else{
         return(
-            <><div id="bookFlights-home">
+            <><Navbar/><div id="bookFlights-home">
                 <div id="bookFlights-home-part1">
                     <h2>Traveller Details</h2>
                     <input type="text" placeholder='First name'id = "userdetails-el" required onChange={(e)=>{

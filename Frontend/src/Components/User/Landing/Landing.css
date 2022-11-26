@@ -8,3 +8,9 @@ height: 100vh;
     background-repeat: no-repeat, repeat;
     padding: 80px;
 }
+
+#landing-image{
+    height: 80%;
+    width:80%;
+    margin-left: 9%;
+}

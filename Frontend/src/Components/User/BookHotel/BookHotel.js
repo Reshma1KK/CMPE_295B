@@ -3,6 +3,7 @@ import Axios from 'axios';
 import './BookHotel.css'
 import ConfirmModel from './ConfirmModel';
 import Footer from '../Footer/footer';
+import Navbar from '../../NavBar/NavBar' 
 
 const BookHotel = ()=>{
     const[isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const BookHotel = ()=>{
     }
 
     return(
-        <><div id="bookHotel-el">
+        <><Navbar/><div id="bookHotel-el">
             <h1>Review Order</h1>
             <div id="float-container-1">
                 <div id="float-child-el-order-1">

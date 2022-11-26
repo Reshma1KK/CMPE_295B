@@ -2,13 +2,14 @@ import React from 'react';
 import Footer from '../Footer/footer';
 import './viewFlights.css';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../NavBar/NavBar' 
 
 const ViewFlights = ()=>{
     const Flights = JSON.parse(localStorage.getItem('flights'))
     const navigate = useNavigate();
 
     return(
-        <><div id="viewFlights-body">
+        <><Navbar/><div id="viewFlights-body">
             {Flights.map(function (d, idx) {
 
                 return (

@@ -3,6 +3,7 @@ import ConfirmModel from '../BookHotel/ConfirmModel'
 import './bookRentals.css'
 import Footer from '../Footer/footer';
 import Axios from 'axios';
+import Navbar from '../../NavBar/NavBar' 
 
 const BookRentals = ()=>{
     const[isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const BookRentals = ()=>{
     }
 
     return(
-        <><div id="bookRentals">
+        <><Navbar/><div id="bookRentals">
             <div id="bookRental-title">
                 <h1>{localStorage.getItem('title')}</h1>
 

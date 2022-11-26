@@ -11,7 +11,7 @@ const Landing = ()=>{
         <div id = "container">
             <Navbar/>
             <div id = "trip-image">
-            <img src = {trip1} alt = "trip1" width="100%" height = "100%"/>
+            <img src = {trip1} alt = "trip1" width="100%" height = "100%" id="landing-image"/>
             </div>
             
         </div></>

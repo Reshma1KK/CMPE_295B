@@ -2,13 +2,15 @@ import React, {useState} from 'react';
 import '../Hotels/hotels.css'
 import CalenderModel from './CalenderModel'
 import Footer from '../Footer/footer';
+import Navbar from '../../NavBar/NavBar' 
 
 const VactionRentals = ()=>{
     const VactionRentals = JSON.parse(localStorage.getItem('vacationRentals'))
     const[isOpen, setIsOpen] = useState(false);
     
     return(
-        <><div id="HotelItems">
+        <><Navbar/>
+        <div id="HotelItems">
             <div id="viewHotel" style={{ color: "seagreen" }}>
                 <div id="hotel">
                     <div id="container">
