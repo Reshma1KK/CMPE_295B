@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import ConfirmModel from '../BookHotel/ConfirmModel'
 import './bookRentals.css'
 import Footer from '../Footer/footer';
+import Axios from 'axios';
 
 const BookRentals = ()=>{
     const[isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,17 @@ const BookRentals = ()=>{
     let num1 = parseInt(rate)
     let cost = num * num1
     let tax = 0.1*cost
+
+    function bookNow(){
+        setIsOpen(true)
+        Axios.post("http://localhost:3001/bookNow",
+    {userId:localStorage.getItem('id'), name:localStorage.getItem('title'), start:JSON.stringify(localStorage.getItem('startDate')).slice(1, 11), 
+    end:JSON.stringify(localStorage.getItem('endDate')).slice(1, 11), bed:localStorage.getItem('bed'), bath:localStorage.getItem('bath'),
+    adult:localStorage.getItem('adult'), children: localStorage.getItem('children'), rate:(cost + tax)
+    }).then((response)=>{
+      console.log("details entered")
+     });
+    }
 
     return(
         <><div id="bookRentals">
@@ -62,7 +74,7 @@ const BookRentals = ()=>{
                     <h3>Total: ${cost + tax}</h3>
                     <p>Due Today: ${cost + tax}</p>
                     <p>Due at Check in: $0</p>
-                    <button id="checkout-el" onClick={() => setIsOpen(true)}>Proceed to Check Out</button>
+                    <button id="checkout-el" onClick={bookNow}>Proceed to Check Out</button>
                     <ConfirmModel open={isOpen} onClose={() => setIsOpen(false)} />
             </div>
           
