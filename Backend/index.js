@@ -95,6 +95,15 @@ app.use("/getThingsToDo",getThingsToDo);
 const reserveActivity = require("./routes/reserveActivity")
 app.use("/reserveActivity",reserveActivity);
 
+const retrieveFlightBookings = require("./routes/retrieveFlightBookings")
+app.use("/retrieveFlightBookings",retrieveFlightBookings);
+
+const retrieveHotelBookings = require("./routes/retrieveHotelBookings")
+app.use("/retrieveHotelBookings",retrieveHotelBookings);
+
+const retrieveTableBookings = require("./routes/retrieveTableBookings")
+app.use("/retrieveTableBookings",retrieveTableBookings);
+
 const userSignup=require("./routes/SignUp");
 app.use('/signup', userSignup);
 

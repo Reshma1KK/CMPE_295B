@@ -1,0 +1,32 @@
+.parent-reciept{
+    display:flex;
+    justify-content: space-between;
+    background-color: #EEEEEE !important;
+}
+
+.parent-reciept-one{
+    display: flex;
+    flex-direction: column;
+}
+
+.reciept-body{
+    color:#083AA9;
+    font-weight: bold;
+}
+
+.containers{
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:2%;
+}
+
+.bookings-span{
+    color: black;
+    justify-content: right;
+}
+
+
+

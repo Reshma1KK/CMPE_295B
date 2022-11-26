@@ -20,6 +20,7 @@ import BookFlight from './Components/User/Flights/bookFlight';
 import OneWayFlights from './Components/User/Flights/viewOneWay'
 import ThingsToDo from './Components/ThingsToDo/ThingsToDo'
 import ReserveActivity from './Components/ThingsToDo/ReserveActivity'
+import Bookings from './Components/Bookings/Bookings'
 
 function App() {
   console.log("Hello")
@@ -48,6 +49,7 @@ function App() {
         <Route path='/oneWayFlights' element={< OneWayFlights/>} />
         <Route path='/ThingsToDo' element={< ThingsToDo/>} />
         <Route path='/ReserveActivity' element={< ReserveActivity/>} />
+        <Route path='/Bookings' element={< Bookings/>} />
       </Routes>
     </Router>
     </>
