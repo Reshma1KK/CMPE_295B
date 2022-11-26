@@ -1,6 +1,6 @@
 "use strict";
 
-const HotelrentalBooking= require("../Models/BookNow");
+const HotelrentalBooking= require("../Models/BookNow.js");
 
 const handle_request= async(msg, callback)=>{
    
