@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Model from "../User/Model/Model";
 import VacationRentalModel from "../User/Model/VacationRentalModel";
 import RestaurantModel from "../User/Model/RestaurantModel"
+import ThingsToDoModel from "../User/Model/ThingsToDoModel"
 import { useNavigate } from 'react-router-dom';
 
 const style = {
@@ -33,6 +34,7 @@ function LandingPage() {
   const[isOpen, setIsOpen] = useState(false);
   const[isRentalOpen, SetIsRentalsOpen] = useState(false);
   const [open,setOpen]=useState(false);
+  const [tOpen,setTopen]=useState(false);
 
   return (
     <>
@@ -49,9 +51,10 @@ function LandingPage() {
           Vacation Rentals <FontAwesomeIcon icon={faHouse} />
         </button>
         <VacationRentalModel open = {isRentalOpen} onClose={()=> SetIsRentalsOpen(false)}/>
-        <button className='button'>
+        <button className='button' onClick={()=> {setTopen(true)}}>
           Things to Do <FontAwesomeIcon icon={faCheck} />
         </button>
+        <ThingsToDoModel open = {tOpen} onClose={()=> setTopen(false)}/>
         <button className="button" onClick={()=> {setOpen(true)}}>
           Restaurants <FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon>
         </button>

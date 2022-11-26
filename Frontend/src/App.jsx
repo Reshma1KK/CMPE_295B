@@ -7,7 +7,6 @@ import SearchBar from "./Components/CustomComponents/SearchBar.js"
 import Landing from './Components/User/Landing/Landing.js';
 import SignUp from './Components/User/SignUp/Signup';
 import SignIn from './Components/User/SignIn/SignIn';
-import Home from './Components/User/Home/Home';
 import Hotels from './Components/User/Hotels/Hotels.js';
 import CalenderModel from './Components/User/Hotels/CalenderModel.js';
 import BookHotel from './Components/User/BookHotel/BookHotel.js';
@@ -19,6 +18,8 @@ import Flights from './Components/User/Flights/flights.js';
 import ViewFlights from './Components/User/Flights/viewFlights.js';
 import BookFlight from './Components/User/Flights/bookFlight';
 import OneWayFlights from './Components/User/Flights/viewOneWay'
+import ThingsToDo from './Components/ThingsToDo/ThingsToDo'
+import ReserveActivity from './Components/ThingsToDo/ReserveActivity'
 
 function App() {
   console.log("Hello")
@@ -34,7 +35,6 @@ function App() {
         <Route path='/signUp' element={<SignUp/>} />
         <Route path='/signIn' element={<SignIn/>} />
         <Route path='/travelbuddy' element={<LandingPage/>} />
-        <Route path='/home' element={<Home/>} />
         <Route path='/hotels' element={<Hotels/>} />
         <Route path='/calenderModel' element={<CalenderModel/>} />
         <Route path='/bookHotel' element={<BookHotel/>} />
@@ -46,6 +46,8 @@ function App() {
         <Route path='/viewFlights' element={<ViewFlights/>} />
         <Route path='/bookFlight' element={< BookFlight/>} />
         <Route path='/oneWayFlights' element={< OneWayFlights/>} />
+        <Route path='/ThingsToDo' element={< ThingsToDo/>} />
+        <Route path='/ReserveActivity' element={< ReserveActivity/>} />
       </Routes>
     </Router>
     </>

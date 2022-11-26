@@ -43,9 +43,10 @@ function ReserveTable(){
     return (
         <>
             <NavBar/>
-            <div style={{ padding:"50px"}}>{isLoading ? <CircularProgress /> : null}</div>
+            <div>{isLoading ? <CircularProgress /> : null}</div>
             <Grid container spacing={2} className="display-page" style={{padding:"20px"}}>
                 <Grid item xs={6} md={12}>
+                        <img src={restaurant.main_image} style={{width:"100%", height:"300px",objectFit:"cover"}}/>
                         <h3>{restaurant.restaurantName}</h3>
                 </Grid>
                 <Grid item xs={4} md={2} className="display-ele rating-container">
@@ -55,11 +56,16 @@ function ReserveTable(){
                         precision={0.5}
                         max={5}
                         name="hover-feedback"
+                        sx={{
+                            '& .MuiRating-iconFilled': {
+                              color: 'green',
+                            }
+                          }}
                         readOnly
                     />
                     </div>
                     <div className="rating-child">
-                    <a style={{fontSize:"small", color:"blue", fontWeight:"bold", padding:"1em"}}>({restaurant.totalReviews})</a>
+                    <a style={{fontSize:"small", color:"cornflowerblue", fontWeight:"bold", padding:"1em"}}>({restaurant.totalReviews})</a>
                     </div>
                 </Grid>
                 <Grid item xs={4} md={4} className="rating-container display-ele">

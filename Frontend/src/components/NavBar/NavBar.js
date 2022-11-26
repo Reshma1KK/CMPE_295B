@@ -1,7 +1,7 @@
 import React from "react";
 import './NavBar.css'
 import PersonIcon from '@mui/icons-material/Person';
-import {Button,Dialog,Box,DialogContent,DialogActions, Typography} from "@mui/material"
+import {Button,Dialog,Box,DialogContent, Typography} from "@mui/material"
 import { useNavigate } from 'react-router-dom';
 
 function NavBar(){
@@ -50,10 +50,10 @@ function NavBar(){
                                 <Typography>Do you want to logout</Typography>
                             </Box>
                             </DialogContent>
-                            <DialogActions>
-                            <Button onClick={handleClose}>Cancel</Button>
-                            <Button onClick={handleChange}>Ok</Button>
-                            </DialogActions>
+                            <Box style={{padding:"10px"}}>
+                            <Button variant="contained" onClick={handleClose} style={{marginLeft:"15px"}}>Cancel</Button>
+                            <Button variant="contained" color="success" onClick={handleChange} style={{marginLeft:"2px"}}>Ok</Button>
+                            </Box>
                         </Dialog>
                     </div>
                     </span>

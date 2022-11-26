@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar.js';
 import "./Restaurants.css"
 import {Button,Rating,} from '@mui/material';
 import {Link} from 'react-router-dom';
+import footer from '../User/Footer/footer'
 
 
 const Restaurants = () => {
