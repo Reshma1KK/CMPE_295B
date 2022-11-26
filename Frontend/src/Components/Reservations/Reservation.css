@@ -1,0 +1,16 @@
+.reservation-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: white;
+    padding: 5px;
+}
+
+.reservation-sub-parent{
+    display: flex;
+    gap: 50px;
+}
+
+.form-control{
+    height: 45px;
+}

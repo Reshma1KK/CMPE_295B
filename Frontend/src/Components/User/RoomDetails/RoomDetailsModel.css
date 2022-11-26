@@ -1,0 +1,12 @@
+#float-child-el-img{
+height:400px;
+width: 50%;
+float: left;
+}
+
+#float-child-el-details{
+    height:400px;
+    width: 40%;
+    float: left;
+    padding-left: 50px;
+}

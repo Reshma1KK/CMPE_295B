@@ -1,0 +1,9 @@
+.activity-container{
+    display:flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.small-container{
+    display: flex;
+    gap: 5px;
+}

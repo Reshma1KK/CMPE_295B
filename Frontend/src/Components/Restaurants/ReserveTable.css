@@ -1,0 +1,21 @@
+.display-ele{
+    border-right: 2px solid cornflowerblue;
+    height: 40px;
+}
+.rating-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.reservation-section-parent{
+    display: flex;
+}
+
+.reservation-section{
+    background-color:white;
+}
+
+.display-page{
+    background-color: whitesmoke;
+}

@@ -1,0 +1,55 @@
+
+ body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  img {
+    width: 200px;
+    height: 100px;
+  }
+  
+  .logo {
+    margin-left: 50px;
+  }
+  
+  .button {
+    border: 2px solid #000000; /* Green */
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+  }
+  
+  .buttonGroup {
+    margin-top: 30px;
+    margin-left: 120px;
+  }
+  
+  .button:hover {
+    background-color: black; /* Green */
+    color: white;
+  }
+  
+  .searchBar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 400px;
+    width: 100%;
+    background-color: powderblue;
+    background-size: 100% 100%;
+  }

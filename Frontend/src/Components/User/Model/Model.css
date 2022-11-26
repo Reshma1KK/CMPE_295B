@@ -1,0 +1,19 @@
+#search{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus{
+    outline: none;
+}
+
+#hotelSearch{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+}
