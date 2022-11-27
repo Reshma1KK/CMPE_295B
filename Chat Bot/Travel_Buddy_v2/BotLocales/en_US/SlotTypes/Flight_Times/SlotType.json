@@ -1,0 +1,1 @@
+{"name":"Flight_Times","identifier":"QOH98RICG6","description":null,"slotTypeValues":[{"synonyms":null,"sampleValue":{"value":"07:35"}},{"synonyms":null,"sampleValue":{"value":"08:35"}}],"parentSlotTypeSignature":null,"valueSelectionSetting":{"regexFilter":null,"resolutionStrategy":"ORIGINAL_VALUE"}}
