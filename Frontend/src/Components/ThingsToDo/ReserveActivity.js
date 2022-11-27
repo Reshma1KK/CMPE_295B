@@ -50,7 +50,7 @@ const ReserveActivity = () => {
                         <h6 style={{width:"600px",paddingTop:"20px"}}>{activity.about}</h6>
                     </div>
                     <div>
-                        <h5 style={{paddingTop:"20px", fontWeight:"bold"}}>From {activity.cost}</h5>
+                        <h5 style={{paddingTop:"20px", fontWeight:"bold"}}>Cost: {activity.cost}</h5>
                     </div>
                     <div className="small-container">
                         <p><PeopleIcon/></p>

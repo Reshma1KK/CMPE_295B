@@ -28,5 +28,6 @@
 .main-container{
   display: flex;
   margin-left: 4%;
+  flex-wrap: wrap;
   gap: 2%;
 }
