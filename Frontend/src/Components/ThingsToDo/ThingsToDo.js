@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import axios from "axios";
-import {Button,Rating,Link} from "@mui/material"
+import {Link} from "@mui/material"
 import NavBar from "../NavBar/NavBar"
-import Footer from '../User/Footer/footer'
 import { useNavigate } from 'react-router-dom';
+import '../Restaurants/Restaurants.css'
 
 function ThingsToDo(){
 
@@ -33,39 +33,34 @@ function ThingsToDo(){
 
 
     return (
-        <div>
-        <NavBar/>
-        <h4 className="restaurant-header">PLACES NEARBY {storedLocation.toUpperCase()}</h4>
-        <div className="body-restaurant">
-        {thingsToDo.filter(function (things) {
-            console.log("talk to me")
-            console.log(things.location.toLowerCase().includes(storedLocation))
-            if(things.location.toLowerCase().includes(storedLocation)){
-                return true;
-        }}).map(function (things) {
-            return(
-            <div class = "__area text-center" style={{display:"inline-block"}}>
-            <a href = "#" class = "__card">
-            <button class = "__favorit"><i class = "la la-heart-o"></i></button>
-            <img src = "https://i.pinimg.com/originals/74/84/4c/74844c4207ec819b6ffaa6291591311e.jpg" class="img-fluid __img"/>
-            <Rating name="read-only" value={things.reviews} readOnly />
-                <div class = "__card_detail text-left">
-                    <h4>{things.name}</h4>
-                    <div class = "__detail">
-                        <Link to="/ReserveTable">
-                            <Button variant="contained" color="success" size="small" style={{border:"1px solid"}} onClick={()=>{reserveActivity(things.name)}}>
-                                Check Location
-                            </Button>
-                        </Link>
+            <>
+            <NavBar/>
+            <div>
+                <h6 className="restaurant-heading">Search results matching "{localStorage.getItem("location")}"</h6>
+            </div>
+            <div className="main-container">
+            {thingsToDo.filter(function (things) {
+                if(things.location.toLowerCase().includes(storedLocation)){
+                    return true;
+            }}).map(function (things) {
+                return(
+                <div className="main-parent">
+                    <div className="restaurant-body">
+                        <div className="child-body">
+                            <img src = {things.image} className="restaurant-image"/>
+                        </div>
+                        <div className="child-body">
+                            <Link to="/ReserveTable" onClick={()=>{reserveActivity(things.name)}}>
+                            <h6 className="restaurant-name second">{things.name}</h6>
+                            </Link>
+                            <p><span style={{color:"green"}}>{things.duration} | {things.location}</span></p>
+                        </div>
                     </div>
                 </div>
-            </a>
+                )
+            })}
             </div>
-            )
-        })}
-        </div>
-        <Footer/>
-        </div>
+        </>
         )
       }
 

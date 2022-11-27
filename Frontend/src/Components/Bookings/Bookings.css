@@ -10,7 +10,7 @@
 }
 
 .reciept-body{
-    color:#083AA9;
+    color:rgb(118, 118, 118);
     font-weight: bold;
 }
 
@@ -26,6 +26,10 @@
 .bookings-span{
     color: black;
     justify-content: right;
+}
+
+h6{
+    font-weight: bolder;
 }
 
 

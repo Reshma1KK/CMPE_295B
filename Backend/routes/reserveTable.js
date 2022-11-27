@@ -6,6 +6,7 @@ console.log("here for restaurant")
 router.post("/", (req,res) =>{
       console.log(req.body)
       const table={
+          userId: req.body.id,
           guests:req.body.guests,
           date:req.body.date,
           time:req.body.time,
@@ -23,6 +24,7 @@ router.post("/", (req,res) =>{
         else{
         console.log("Fetching result");
                 var newTable = new ReserveTable({
+                    userId: req.body.id,
                     guests:req.body.guests,
                     date:req.body.date,
                     time:req.body.time,

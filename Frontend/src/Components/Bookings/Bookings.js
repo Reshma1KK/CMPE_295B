@@ -61,15 +61,15 @@ const Bookings = () => {
                 <div>
                   <Card className="containers">
                     <div className="parent-reciept">
-                      <h5 className="parent-child">Flight Bookings</h5>
-                      <div className="parent-child"><FlightIcon/></div>
+                      <h6 className="parent-child">Flight Bookings</h6>
+                      <div className="parent-child heading"><FlightIcon/></div>
                     </div>
                     <div className="parent-reciept-one">
                       <h6 className="reciept-body">FROM: <span className="bookings-span">{flight.Start}</span></h6>
                       <h6 className="reciept-body">TO: <span className="bookings-span">{flight.Dest}</span></h6>
                       <h6 className="reciept-body">DEPART: <span className="bookings-span">{flight.Time}</span></h6>
                       <h6 className="reciept-body">RETURN: <span className="bookings-span">{flight.Return}</span></h6>
-                      <h6 className="reciept-body">RATE: <span className="bookings-span">{flight.Rate}</span></h6>
+                      <h6 className="reciept-body">RATE: <span className="bookings-span">${flight.Rate}</span></h6>
                     </div>
                   </Card>
                 </div>
@@ -80,14 +80,14 @@ const Bookings = () => {
                 <div>
                   <Card className="containers">
                     <div className="parent-reciept">
-                      <h5 className="parent-child">Hotel Bookings</h5>
+                      <h6 className="parent-child heading">Hotel Bookings</h6>
                       <div className="parent-child"><HotelIcon/></div>
                     </div>
                     <div className="parent-reciept-one">
                       <h6 className="reciept-body">HOTEL: <span className="bookings-span">{hotel.Name}</span></h6>
                       <h6 className="reciept-body">FROM: <span className="bookings-span">{hotel.Start}</span></h6>
                       <h6 className="reciept-body">TO: <span className="bookings-span">{hotel.End}</span></h6>
-                      <h6 className="reciept-body">RATE: <span className="bookings-span">{hotel.Rate}</span></h6>
+                      <h6 className="reciept-body">RATE: <span className="bookings-span">${hotel.Rate}</span></h6>
                     </div>
                   </Card>
                 </div>
@@ -98,7 +98,7 @@ const Bookings = () => {
                 <div>
                   <Card className="containers">
                     <div className="parent-reciept">
-                      <h5 className="parent-child">Table Reservation</h5>
+                      <h6 className="parent-child heading">Table Reservation</h6>
                       <div className="parent-child"><DinnerDiningIcon/></div>
                     </div>
                     <div className="parent-reciept-one">

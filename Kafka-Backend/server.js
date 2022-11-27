@@ -24,6 +24,7 @@ var hotels = require('./services/viewHotel.js');
 var rentals = require('./services/viewRentals.js');
 var flights = require('./services/viewFlights.js');
 var bookFlight = require('./services/bookFlight')
+var bookNow = require('./services/bookNow');
 
 function handleTopicRequest(topic_name,fname){
     //var topic_name = 'root_topic';
@@ -61,3 +62,4 @@ handleTopicRequest("viewHotels",hotels)
 handleTopicRequest("viewRentals",rentals)
 handleTopicRequest("viewFlights",flights)
 handleTopicRequest("postFlightBooking",bookFlight)
+handleTopicRequest("postBooking",bookNow)

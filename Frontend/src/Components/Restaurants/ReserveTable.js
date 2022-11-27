@@ -7,7 +7,6 @@ import NavBar from "../NavBar/NavBar"
 import "./ReserveTable.css"
 import Carousel from "../CustomComponents/Carousel"
 import Reservation from "../Reservations/Reservation"
-import Footer from '../User/Footer/footer'
 import RestaurantCardDetails from '../CustomComponents/RestaurantDetailsCard'
 import Location from '../CustomComponents/Location'
 import CircularProgress from '@mui/material/CircularProgress';
@@ -86,7 +85,7 @@ function ReserveTable(){
                     </div>
                 </Grid>
             </Grid>
-            <Grid className="reservation-section-parent" container style={{padding:"40px", backgroundColor:"#f2f2f2", height: "500px"}}>
+            <Grid className="reservation-section-parent" container style={{padding:"40px", height: "500px"}}>
                 <Card>
                     <Reservation/>
                 </Card>
@@ -94,7 +93,7 @@ function ReserveTable(){
                     <Carousel/>
                 </Card>
             </Grid>
-            <Grid className="reservation-section-parent" container style={{padding:"40px", backgroundColor:"#f2f2f2", height: "500px"}}>
+            <Grid className="reservation-section-parent" container style={{padding:"40px", height: "500px"}}>
                 <Card style={{width:"400px"}}>
                     <ReviewsCard/>
                 </Card>
@@ -105,7 +104,6 @@ function ReserveTable(){
                     <Location/>
                 </Card>
             </Grid>
-            <Footer/>
         </>
         )
       }
