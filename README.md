@@ -6,3 +6,4 @@
 ### Repo Structure
 1. [Backend](/Backend)
 2. [Frontend](/Frontend)
+3. [Chat Bot](/Chat%20Bot)
