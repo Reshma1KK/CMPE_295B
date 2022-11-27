@@ -104,26 +104,26 @@ app.use("/retrieveHotelBookings",retrieveHotelBookings);
 const retrieveTableBookings = require("./routes/retrieveTableBookings")
 app.use("/retrieveTableBookings",retrieveTableBookings);
 
-// const userSignup=require("./routes/SignUp");
-// app.use('/signup', userSignup);
+const userSignup=require("./routes/SignUp");
+app.use('/signup', userSignup);
 
-// const userSignin=require("./routes/SignIn");
-// app.use('/signin', userSignin);
+const userSignin=require("./routes/SignIn");
+app.use('/signin', userSignin);
 
-// const viewHotel=require("./routes/viewHotels");
-// app.use('/viewHotels', viewHotel);
+const viewHotel=require("./routes/viewHotels");
+app.use('/viewHotels', viewHotel);
 
-// const viewVactionRentals=require("./routes/viewVacationRentals");
-// app.use('/viewRentals', viewVactionRentals);
+const viewVactionRentals=require("./routes/viewVacationRentals");
+app.use('/viewRentals', viewVactionRentals);
 
-// const viewFlights = require('./routes/viewFlights')
-// app.use('/viewflights', viewFlights)
+const viewFlights = require('./routes/viewFlights')
+app.use('/viewflights', viewFlights)
 
-// const bookFlight = require('./routes/flightBooking')
-// app.use('/bookFlight', bookFlight)
+const bookFlight = require('./routes/flightBooking')
+app.use('/bookFlight', bookFlight)
 
-// const bookings = require('./routes/bookings')
-// app.use('/bookNow', bookings)
+const bookings = require('./routes/bookings')
+app.use('/bookNow', bookings)
 
 app.listen(3001,()=>{
     console.log(`Server running on port 3001`)
