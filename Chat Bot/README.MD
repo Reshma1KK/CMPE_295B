@@ -4,6 +4,8 @@
 * shows the folders for intents and slots used for chat bot logic  
 2. [Lambda Function written in python](/Chat%20Bot/LexBot.py)  
 * The lambda function written to corrolate with the given chat bot  
+3. [Future Developments for the Travel Buddy Bot](/Chat%20Bot/Future%20Versions%20of%20Travel%20Buddy)  
+* This folder holds the next versions of The Travel Buddy Bot and the lambda files (if applicable)
   
 ## Chat Bot Development  
 * The Chat Bot was built using [Amazon Lex](https://aws.amazon.com/lex/)
