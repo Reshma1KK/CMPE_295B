@@ -6,6 +6,9 @@
 * The lambda function written to corrolate with the given chat bot  
 3. [Future Developments for the Travel Buddy Bot](/Chat%20Bot/Future%20Versions%20of%20Travel%20Buddy)  
 * This folder holds the next versions of The Travel Buddy Bot and the lambda files (if applicable)
+
+### Current Travel Buddy Intent Schemas
+* The folder [Intent Schemas](/Chat%20Bot/Travel_buddy_v1.01/Intent%20Schemas) has the current V1.01 schemas for the intents
   
 ## Chat Bot Development  
 * The Chat Bot was built using [Amazon Lex](https://aws.amazon.com/lex/)
